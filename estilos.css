@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8dddd;
+    color: #222;
+}
+
+/* -------------------------
+   VENTANA DE BIENVENIDA
+------------------------- */
+
+.contenedor {
+    width: 540px;
+    min-height: 700px;
+    margin: 30px auto;
+    padding: 50px 70px;
+    background-color: #f5d9d9;
+    text-align: center;
+    border: 15px solid white;
+}
+
+.contenedor h1 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 55px;
+}
+
+.contenedor button {
+    display: block;
+    width: 270px;
+    height: 58px;
+    margin: 20px auto;
+    border: none;
+    background-color: #b98585;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contenedor button:hover {
+    background-color: #a66f6f;
+}
+
+.contenedor .salir {
+    width: 100px;
+    margin-top: 60px;
+}
+
+
+/* -------------------------
+   FORMULARIOS
+------------------------- */
+
+.formulario {
+    width: 100%;
+    background-color: #d9baba;
+    padding: 45px 35px;
+    text-align: left;
+}
+
+.formulario label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.formulario input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-bottom: 2px solid #777;
+    background-color: #c89595;
+    padding: 10px;
+    margin-bottom: 30px;
+    outline: none;
+}
+
+.formulario button {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.formulario .secundario {
+    background-color: #d3a5a5;
+}
+
+
+/* -------------------------
+   VENTANA PRINCIPAL
+------------------------- */
+
+.principal {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 700px;
+    margin: 30px auto;
+    padding: 60px;
+    background-color: #f5d9d9;
+    text-align: center;
+}
+
+.principal h1 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    justify-content: center;
+    gap: 55px 100px;
+}
+
+.producto {
+    text-align: center;
+}
+
+.imagen-producto {
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    background-color: #c99b9b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-producto img {
+    color: #555;
+    width: 100px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.producto p {
+    background-color: #e5c1c1;
+    padding: 12px;
+    margin-top: 5px;
+}
+
+.producto button {
+    width: 140px;
+    height: 45px;
+    border: none;
+    background-color: #b98585;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.producto button:hover {
+    background-color: #a66f6f;
+}
+
+.volver {
+    margin-top: 50px;
+    width: 120px;
+    height: 45px;
+    border: none;
+    background-color: #b98585;
+    cursor: pointer;
+}
+
+
+/* -------------------------
+   DETALLE DEL PRODUCTO
+------------------------- */
+
+.detalle {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 600px;
+    margin: 30px auto;
+    background-color: #f5d9d9;
+    padding: 30px;
+}
+
+.barra {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.barra button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #b98585;
+    cursor: pointer;
+}
+
+.detalle h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contenido-producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.imagen-grande {
+    width: 250px;
+    height: 250px;
+    background-color: #b98b8b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion {
+    width: 400px;
+    text-align: center;
+}
+
+.informacion h3 {
+    margin-bottom: 25px;
+}
+
+.informacion p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.informacion button {
+    width: 130px;
+    height: 45px;
+    border: none;
+    background-color: #b98585;
+    cursor: pointer;
+}
+
+
+/* -------------------------
+   RESPONSIVO
+------------------------- */
+
+@media (max-width: 700px) {
+
+    .contenedor {
+        width: 95%;
+        padding: 40px 25px;
+    }
+
+    .contenedor button {
+        width: 90%;
+    }
+
+    .principal {
+        padding: 35px 15px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 15px;
+    }
+
+    .contenido-producto {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .informacion {
+        width: 90%;
+    }
+}
